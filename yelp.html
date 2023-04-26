@@ -1,0 +1,42 @@
+<!-- Student Name : Guarav Ardak
+Student ID : 1001969216
+College ID : gca9216 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+	<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8"/>
+	<style>
+      #map {
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript" src="yelp.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-qPbXKg40fs8OY3DcVn4BSxWJLlqh7ps&callback=initMap&libraries=geometry" type="text/javascript"></script>
+  </head>
+  <body onload="initialize();" bgcolor = "rainbow">
+    <form>
+       <label>Search Terms: <input type="text" id="search"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+	<table>
+    <colgroup>
+      <col span="1"/>
+      <hr>
+      <col span="1"/>
+    </colgroup>
+		<tr>
+			<td style="vertical-align: top;">
+				<div id="map" style="width:600px;height:500px;"></div>
+			</td>
+    </tr>
+    <tr>
+			<td style="vertical-align: top;">
+				<div id="output">&nbsp;</div>
+			</td>
+		</tr>		
+	</table>
+  </body>
+</html>
